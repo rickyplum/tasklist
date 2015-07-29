@@ -9,6 +9,7 @@
   "author": "Bloc and Nick Ferraro",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "hapi": "^7.5.0",
     "path": "^0.4.9"
   },
