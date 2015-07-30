@@ -1,0 +1,19 @@
+.app-box {
+	background: #e0e0e0;
+	width: 568px;
+    height: 615px;
+}
+
+.current-task {
+	background: #D3D3D3;
+}
+
+.current-task h1 {
+	padding: 10px;
+}
+
+.active-task {
+	background: #f1f1f1;
+	border: 1px;
+}
+
