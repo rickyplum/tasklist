@@ -1,17 +1,36 @@
 .app-box {
 	background: #e0e0e0;
 	height: 600px;
+	padding-right: 0px;
+    padding-left: 0px;
 }
 
 .current-task {
 	background: #D3D3D3;
 }
 
-.current-task h1 {
+h1, h3 {
 	padding: 10px;
 }
 
 .active-task {
 	background: #f1f1f1;
+	
+}
+
+h3 {
+	font-weight: 200;
+}
+
+.links {
+ 	float:right;
+ 	text-align: center;
+ 	padding: 10px;
+ 	margin-right: -129px;
+}
+
+.link {
+ 	display: inline-block;
+ 	padding-right: 20px;
 }
 
