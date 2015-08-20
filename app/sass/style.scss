@@ -9,6 +9,10 @@
 	background: #D3D3D3;
 }
 
+.btn-wide {
+	width: 100%;
+}
+
 h1, h3 {
 	padding: 10px;
 }
@@ -33,3 +37,32 @@ h3 {
  	display: inline-block;
  	padding-right: 20px;
 }
+
+/*
+ * Form
+ */
+
+.form-primary label {
+	display: block;
+}
+
+.form-primary .form-control {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+	background-color: #f1f1f1;
+	border-radius: 0;
+}
+	
+.form-primary .btn {
+	margin-top: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #000;
+	color: #fff;
+}
+
+.form-primary .col-md-5,
+.form-primary .col-md-2 {
+	padding: 0;
+	}
