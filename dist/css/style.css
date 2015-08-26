@@ -29,6 +29,10 @@ h3 {
   display: inline-block;
   padding-right: 20px; }
 
+.glyphicon {
+  margin-top: 30px;
+  font-size: 24px; }
+
 /*
  * Form
  */

@@ -20,37 +20,33 @@
 		</div>
 	
 <div class="clearfix">
-	<form class="form-inline form-primary">
+	<form ng-submit="addTask()" class="form-inline form-primary">
 	  <div class="form-group col-md-5 text-center">
 	    <label for="exampleInputEmail3">Task Description</label>
-	    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter new task">
+	    <input ng-model="newTaskName" type="text" class="form-control" id="exampleInputEmail3" placeholder="Enter new task">
 	  </div>
 	  <div class="form-group col-md-5 text-center">
 	    <label for="exampleInputEmail3">Priority</label>
-	    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="high, med, low">
+	    <input ng-model="newTaskPriority" type="text" class="form-control" id="exampleInputEmail3" placeholder="high, med, low">
 	  </div>
 	<div class="col-md-2">
   		<button type="submit" class="btn btn-default btn-wide">Add</button>
   	</div>
 	</form>
-</div>	
+</div>
 
-		<div class="active-task">
+
+		<div ng-repeat="task in tasks" class="active-task">
 			<div class="container">
 				<div class="row">
 					<div class="task">
-						<h3>Clean the hampster cage</h3>
-						<i><span class="glyphicon glyphicon glyphicon-ok-circle" aria-hidden="true"></span></i>
+						<div class="col-md-6">
+							<h3>{{ task.name }}</h3>
+						</div>
+						<div class="col-md-6">	
+							<span class="glyphicon glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="active-task">
-			<div class="container">
-				<div class="row">
-					<h3>Complain about cleaning the hampster cage</h3>
 				</div>
 			</div>
 		</div>

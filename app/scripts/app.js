@@ -1,4 +1,4 @@
-app = angular.module('tasklist', ['ui.router']);
+app = angular.module('tasklist', ['ui.router', 'firebase']);
 
 
 app.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
@@ -18,10 +18,20 @@ app.config(['$stateProvider', '$locationProvider', function($stateProvider, $loc
 
  }]);
 
-app.controller('Active.controller', ['$scope', function($scope) {
+app.controller('Active.controller', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+  var ref = new Firebase("https://incandescent-heat-7820.firebaseIO.com");
+  $scope.tasks = $firebaseArray(ref);
+   $scope.addTask = function() {
+    $scope.tasks.$add({
+      name: $scope.newTaskName,
+      priority: $scope.newTaskPriority
+    });
+  };
 	console.log("test");
 }]);
 
-app.controller('History.controller', ['$scope', function($scope) {
+app.controller('History.controller', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+  var ref = new Firebase("https://incandescent-heat-7820.firebaseIO.com");
+  $scope.tasks = $firebaseArray(ref);
 
 }]);
